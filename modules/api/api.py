@@ -408,8 +408,7 @@ class Api:
 
         upscalereq = models.ExtrasBatchImagesRequest(**payload)
         upscaled = self.extras_batch_images_api(upscalereq)
-        breakpoint()
-        return models.TextToImageResponse(images=upscaled, parameters=vars(txt2imgreq), info=processed.js())
+        return models.TextToImageResponse(images=upscaled.images, parameters=vars(txt2imgreq), info=processed.js())
 
     def img2imgapi(self, img2imgreq: models.StableDiffusionImg2ImgProcessingAPI):
         init_images = img2imgreq.init_images
