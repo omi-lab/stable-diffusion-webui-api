@@ -401,7 +401,7 @@ class Api:
         "upscaling_resize_w": 2048,
         "upscaling_resize_h": 2048,
         "upscaling_crop": "false",
-        "upscaler_1": "ESRGAN_4x",
+        "upscaler_1": "SwinIR_4x", #Currently SwinIR_4x or ESRGAN_4x
         "upscale_first": "true",
         "imageList": listo
         }
